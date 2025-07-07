@@ -1,6 +1,5 @@
 __pycache__/
 *.pyc
-.env
 ragvenv/
 node_modules/
 dist/
