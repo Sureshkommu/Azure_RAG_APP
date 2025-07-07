@@ -1,0 +1,17 @@
+# Azure credentials and settings
+
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+AZURE_BLOB_CONN_STRING = os.getenv("AZURE_BLOB_CONN_STRING")
+BLOB_CONTAINER_NAME = os.getenv("BLOB_CONTAINER_NAME")
+
+AZURE_SEARCH_ENDPOINT = os.getenv("AZURE_SEARCH_ENDPOINT")
+AZURE_SEARCH_KEY = os.getenv("AZURE_SEARCH_KEY")
+AZURE_SEARCH_INDEX = os.getenv("AZURE_SEARCH_INDEX")
+
+AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
+AZURE_OPENAI_KEY = os.getenv("AZURE_OPENAI_KEY")
+AZURE_OPENAI_MODEL = os.getenv("AZURE_OPENAI_MODEL")
+API_VERSION = "2024-12-01-preview"

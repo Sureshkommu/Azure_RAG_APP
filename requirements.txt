@@ -1,0 +1,11 @@
+# Python dependencies
+fastapi==0.95.2
+uvicorn==0.22.0
+pydantic==1.10.15
+azure-storage-blob==12.19.1
+python-dotenv==1.0.1
+python-multipart
+requests
+openai
+textract
+
