@@ -1,18 +1,19 @@
 # Instructions
 
-# 🚀 Azure RAG FastAPI App (No LangChain)
+# 🚀 1. Azure RAG FastAPI App (No LangChain): under 'app' directory
 
 A lightweight Retrieval-Augmented Generation (RAG) backend using **FastAPI**, **Azure Blob Storage**, and **Cognitive Search**, **Azure OpenAI**. Upload Documents(PDF,DOCX,XLSX,CSV,etc.) This version does **not** use LangChain. Extract and search thier content. Generate answers using GPT based on file content.
 
-1. Setup Virtual Environment
-open your project folder path ex: cd D:\azure_rag_app
+1. Setup Virtual Environment:
+open your project folder path ex: cd D:\azure_rag_app>
 python -m venv ragvenv
 ragvenv\Scripts\activate
 
-2. Install Dependencies
+2. Install Dependencies:
 pip install -r requirements.txt
 
-4. Run the FastAPI App
+4. Run the FastAPI App:
+open your project folder path ex: cd D:\azure_rag_app> 
 uvicorn app.main:app --reload
 
 ✅ STEP-BY-STEP AZURE PORTAL UI GUIDE
@@ -194,3 +195,137 @@ AZURE_OPENAI_KEY
 AZURE_OPENAI_ENDPOINT
 
 
+# 🚀 2. Azure OpenAI with image generation App (No LangChain): under 'image' directory
+
+Here is a step-by-step UI guide to set up and use Azure OpenAI with image generation (like DALL·E) using the Azure Portal, including where to find your endpoint, key, and deployment name for Python use.
+
+✅ STEP 1: Create an Azure OpenAI Resource
+Go to the Azure Portal
+
+Click on “Create a resource” (suropenairg)
+
+Search for “Azure OpenAI” and click on it
+
+Click Create
+
+Fill in the basics:
+
+Subscription: your Azure subscription
+
+Resource group: create or choose one
+
+Region: e.g., swedencentral (only some regions support OpenAI for image generation)
+
+Name: e.g., sursweden
+
+Pricing tier: Standard S0
+
+Click Review + Create, then Create
+
+✅ STEP 2: Get Endpoint and API Key
+Go to your resource (Azure OpenAI instance)
+
+In the left menu, click “Keys and Endpoint”
+
+Copy:
+
+Key 1 (API key)
+
+Endpoint (starts with https://<name>.openai.azure.com)
+
+✅ STEP 3: Deploy a Model (e.g., dall-e-3 or dall-e-2)
+In the same resource, go to “Deployments” (left menu)
+
+Click + Create
+
+Fill in:
+
+Model: Choose DALL-E 3 (or DALL-E 2)
+
+Deployment name: e.g., image-demo-dall-e-3
+
+API version: usually auto-selected
+
+Click Create
+
+✅ STEP 4: Confirm Model API Version
+The latest for DALL·E is:
+2024-04-01-preview
+
+✅ STEP 5: Use in Python
+Once you have:
+
+Endpoint: https://<your-name>.openai.azure.com
+
+Key: (from step 2)
+
+Deployment name: image-demo-dall-e-3 (or your chosen name)
+
+API version: 2024-04-01-preview
+
+# 🚀 3. Azure OpenAI with audio generation App (No LangChain): under 'audio' directory
+
+Here is a step-by-step UI guide to set up and use Azure OpenAI with image generation (like DALL·E) using the Azure Portal, including where to find your endpoint, key, and deployment name for Python use.
+
+✅ STEP 1: Create an Azure OpenAI Resource
+Go to the Azure Portal
+
+Click on “Create a resource” (suropenairg)
+
+Search for “Azure OpenAI” and click on it
+
+Click Create
+
+Fill in the basics:
+
+Subscription: your Azure subscription
+
+Resource group: create or choose one
+
+Region: e.g., west europe
+
+Name: e.g., sureurope
+
+Pricing tier: Standard S0
+
+Click Review + Create, then Create
+
+✅ STEP 2: Get Endpoint and API Key
+Go to your resource (Azure OpenAI instance)
+
+In the left menu, click “Keys and Endpoint”
+
+Copy:
+
+Key 1 (API key)
+
+Endpoint (starts with https://<name>.openai.azure.com)
+
+✅ STEP 3: Deploy a Model (e.g., whisper)
+In the same resource, go to “Deployments” (left menu)
+
+Click + Create
+
+Fill in:
+
+Model: Choose whisper 
+
+Deployment name: e.g., audio-demo-whisper
+
+API version: usually auto-selected
+
+Click Create
+
+✅ STEP 4: Confirm Model API Version
+The latest for wishper is: 2024-04-01-preview
+
+✅ STEP 5: Use in Python
+Once you have:
+
+Endpoint: https://<your-name>.openai.azure.com
+
+Key: (from step 2)
+
+Deployment name: audio-demo-whisper (or your chosen name)
+
+API version: 2024-04-01-preview
