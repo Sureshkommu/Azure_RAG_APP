@@ -1,7 +1,7 @@
 # FastAPI app entry point
 
 from fastapi import FastAPI
-from app.routes import rag
+from app.routes import rag, image, audio, audio_mix
 
 app = FastAPI(
     title="Azure Rag App",  # 👈 This sets the Swagger UI title
@@ -10,4 +10,6 @@ app = FastAPI(
 )
 
 app.include_router(rag.router)
-
+app.include_router(image.router)
+app.include_router(audio.router)
+app.include_router(audio_mix.router)

@@ -21,7 +21,6 @@ async def upload_file(file: UploadFile = File(...)):
         "url": file_url
     }
 
-
 class AskResponse(BaseModel):
     id: str
     question: str
